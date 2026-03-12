@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  --background: #f8f9fa;
-  --foreground: #121212;
-  --accent: #ff4742;
-  --muted: #e5e7eb;
-  --selection: #ff4742;
+  --background: #ffffff;
+  --foreground: #000000;
+  --font-sans: var(--font-space-grotesk), sans-serif;
+  --font-display: var(--font-press-start-2p), cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-muted: var(--muted);
   --font-sans: var(--font-space-grotesk), sans-serif;
-  --font-display: var(--font-press-start-2p), monospace;
+  --font-display: var(--font-press-start-2p), cursive;
 }
 
 ::selection {
-  background-color: var(--selection);
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body {
@@ -28,4 +24,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the Hero specifically uses the display font */
+.header-trooper {
+  font-family: var(--font-press-start-2p), cursive !important;
 }

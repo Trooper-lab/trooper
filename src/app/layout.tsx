@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import { GsapProvider } from "@/components/animations/GsapProvider";
-import { Navbar } from "@/components/Navbar";
+import { FloatingNavbar } from "@/components/FloatingNavbar";
 import { Footer } from "@/components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
@@ -28,11 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/bogam" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body
         className={`${spaceGrotesk.variable} ${pressStart2P.variable} antialiased font-sans`}
       >
         <GsapProvider>
-          <Navbar />
+          <FloatingNavbar />
           {children}
           <Footer />
         </GsapProvider>

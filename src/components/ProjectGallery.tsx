@@ -4,12 +4,14 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-import { projects } from "@/data/projects";
+import { projects } from "@/projects/data";
+
 
 /**
  * ProjectGallery Architecture: Pinned Stacking Interaction
@@ -148,7 +150,16 @@ export function ProjectGallery() {
                                             className="aspect-[4/3] w-full bg-black/10 relative overflow-hidden group border border-black/5"
                                             style={{ backgroundColor: project.color }}
                                         >
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
+                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 z-10"></div>
+                                            {(project.assets?.preview || project.assets?.hero) && (
+                                                <Image
+                                                    src={project.assets.preview || project.assets.hero}
+                                                    alt={project.title}
+                                                    fill
+                                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                                    unoptimized
+                                                />
+                                            )}
                                         </div>
                                     </div>
 
@@ -161,12 +172,20 @@ export function ProjectGallery() {
                                             {project.description}
                                         </p>
 
-                                        <a
-                                            href={`/projects/${project.slug}`}
-                                            className="font-sans font-medium text-[14px] md:text-[16px] underline underline-offset-8 hover:opacity-50 transition-opacity uppercase tracking-widest"
-                                        >
-                                            View Case Study
-                                        </a>
+                                        <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
+                                            <a
+                                                href={`/projects/${project.slug}`}
+                                                className="font-sans font-medium text-[14px] md:text-[16px] underline underline-offset-8 hover:opacity-50 transition-opacity uppercase tracking-widest"
+                                            >
+                                                View Case Study
+                                            </a>
+                                            <a
+                                                href={`/studio/${project.slug}`}
+                                                className="font-sans font-bold text-[12px] md:text-[14px] px-6 py-2.5 bg-black text-white hover:bg-black/80 transition-all uppercase tracking-[0.2em] rounded-sm shadow-lg w-max"
+                                            >
+                                                Launch Studio
+                                            </a>
+                                        </div>
                                     </div>
 
                                 </div>
