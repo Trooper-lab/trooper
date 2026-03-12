@@ -12,7 +12,7 @@ export const IconZBolt = ({ size = 24, className = "" }) => (
     </svg>
 );
 
-export const IconComplexAsterisk = ({ size = "200", className = "" }) => (
+export const IconComplexAsterisk = ({ size = 200, className = "" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className={className} xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2V22M2 12H22M4.93 4.93L19.07 19.07M4.93 19.07L19.07 4.93" />
     </svg>
@@ -25,7 +25,7 @@ export const IconStarBurst = ({ size = 24, className = "" }) => (
 );
 
 export const IconNordicStar = ({ size = 24, className = "" }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className={className} xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className={className} xmlns="http://www.w.org/2000/svg">
         <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 );

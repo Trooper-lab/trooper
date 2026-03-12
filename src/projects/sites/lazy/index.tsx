@@ -491,8 +491,8 @@ export default function LazySite() {
                         Lazy People Society
                     </h2>
                     <div className="society-icon-reveal flex-shrink-0 flex items-center h-full">
-                        <IconComplexAsterisk size="200" className="text-black hidden md:block" />
-                        <IconComplexAsterisk size="15vw" className="text-black md:hidden" />
+                        <IconComplexAsterisk size={200} className="text-black hidden md:block" />
+                        <IconComplexAsterisk size={15} className="text-black md:hidden" />
                     </div>
                 </div>
             </section>
