@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'DXBurst';
+  src: url('/fonts/burst/DxBurst-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DXBurstSmooth';
+  src: url('/fonts/burst/DxBurst-Smooth.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #000000;

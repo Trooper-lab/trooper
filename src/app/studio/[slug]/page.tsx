@@ -28,6 +28,13 @@ export default function StudioPage({ params }: { params: Promise<{ slug: string 
 
     if (!project) notFound();
 
+    // Auto-start build on mount if idle
+    useEffect(() => {
+        if (status === 'idle') {
+            setStatus('building');
+        }
+    }, [status, setStatus]);
+
     // Auto-open terminal on building, close on complete
     useEffect(() => {
         if (status === 'building') setIsTerminalOpen(true);

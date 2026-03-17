@@ -8,6 +8,7 @@
   background-color: var(--lazy-bg);
   color: var(--lazy-fg);
   min-height: 100vh;
+  font-family: 'DXBurst', sans-serif;
 }
 
 /* Lenis Recommended CSS */
@@ -38,10 +39,10 @@ html.lenis body {
 }
 
 /* Localized Font Scoping */
-.fontBogam {
-  font-family: 'Bogam', sans-serif;
+.fontBurst {
+  font-family: 'DXBurst', sans-serif;
   font-weight: normal;
-  /* "Bogam Regular" as per user request */
+  letter-spacing: -0.03em;
 }
 
 .fontReign {
@@ -96,7 +97,7 @@ html.lenis body {
 /* Side Panel Drawer */
 .drawerContent {
   box-shadow: -20px 0 50px rgba(0, 0, 0, 0.05);
-  border-left: 1px border border-black/5;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
   will-change: transform;
 }
 
@@ -108,9 +109,9 @@ html.lenis body {
 }
 
 .drawerTitle {
-  font-family: 'Bogam', sans-serif;
+  font-family: 'DXBurst', sans-serif;
   line-height: 0.9;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .drawerText {
@@ -167,8 +168,7 @@ html.lenis body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15);
-  /* Subtle overlay for contrast and artifact masking */
+  background: rgba(0, 0, 0, 0.15); /* Subtle overlay for contrast and artifact masking */
   z-index: 1;
   pointer-events: none;
 }

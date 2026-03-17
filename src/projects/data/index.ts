@@ -6,6 +6,7 @@
  */
 
 import { lazyConfig } from "../configs/laazy";
+import { befacoConfig } from "../configs/befaco";
 
 export interface Project {
     id: string;
@@ -24,9 +25,10 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    lazyConfig, // Renamed from Snoetje
+    lazyConfig,
+    befacoConfig,
     {
-        id: "02",
+        id: "03",
         slug: "magicalbutter",
         title: "Magicalbutter.com",
         description: "A full-stack web application for a high-volume IoT device brand — fast, scalable, and built to last.",
@@ -36,7 +38,7 @@ export const projects: Project[] = [
         year: "2023"
     },
     {
-        id: "03",
+        id: "04",
         slug: "hashstraat",
         title: "Hashstraat",
         description: "A headless commerce storefront that turns product discovery into a cinematic scroll experience.",
@@ -46,7 +48,7 @@ export const projects: Project[] = [
         year: "2024"
     },
     {
-        id: "04",
+        id: "05",
         slug: "electrcross",
         title: "Electrcross.nl",
         description: "A high-energy digital identity for an electric sports brand — bold visuals, zero load time.",
@@ -56,7 +58,7 @@ export const projects: Project[] = [
         year: "2025"
     },
     {
-        id: "05",
+        id: "06",
         slug: "clouds",
         title: "Clouds",
         description: "A minimal, immersive web experience for a creative collective — where simplicity becomes the statement.",

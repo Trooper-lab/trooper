@@ -10,7 +10,7 @@ export const lazyConfig = {
     slug: "laazy",
     title: "Laazy",
     description: "A luxury high-end wellness brand for Gen Z — rebellious relaxation.",
-    whatWeDid: ["Brand Strategy", "Visial Identity", "Web Design", "Gen Z Consulting"],
+    whatWeDid: ["Brand Strategy", "Visual Identity", "Web Design", "Gen Z Consulting"],
     brief: "Laazy is not a quality but a trait. It is a luxury wellness movement that encourages non-conforming and putting self-care first. Our goal was to build a digital experience that feels both high-end and radically approachable.",
     color: "#C38FFF", // Vibrant Purple from draft
     secondaryColor: "#FFB000", // Yellow accent

@@ -89,9 +89,37 @@ function ProjectContent({ slug }: { slug: string }) {
             </section>
 
             <section className="px-6 md:px-12 pb-32 max-w-7xl mx-auto flex flex-col gap-32">
-                <div className="parallax-media w-full aspect-[16/9] bg-black/[0.03] border border-black/5 flex items-center justify-center overflow-hidden">
-                    <span className="font-sans text-[12px] uppercase tracking-widest opacity-20">Full Width Media Placeholder</span>
+                <div
+                    className="parallax-media w-full aspect-[16/9] relative overflow-hidden border border-black/5"
+                    style={{ backgroundColor: project.color }}
+                >
+                    {(project.assets?.hero || project.assets?.preview) ? (
+                        <img
+                            src={(project.assets.preview || project.assets.hero) as string}
+                            alt={`${project.title} preview`}
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="font-sans text-[12px] uppercase tracking-widest opacity-20">
+                                {project.title}
+                            </span>
+                        </div>
+                    )}
                 </div>
+
+                {/* Studio CTA: Launch the interactive site draft */}
+                {ProjectSites[project.slug] && (
+                    <div className="flex flex-col items-center gap-6 py-24 border-t border-black/5">
+                        <span className="font-sans text-[12px] uppercase tracking-[0.4em] opacity-40">Interactive Preview</span>
+                        <Link
+                            href={`/studio/${project.slug}`}
+                            className="font-sans font-bold text-[14px] px-10 py-4 bg-black text-white hover:bg-black/80 transition-all uppercase tracking-[0.2em] rounded-sm shadow-lg"
+                        >
+                            Open in Studio →
+                        </Link>
+                    </div>
+                )}
             </section>
 
             <section className="py-40 bg-[#E0E0E0] text-foreground px-6 md:px-12 text-center group">

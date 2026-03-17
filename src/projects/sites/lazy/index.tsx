@@ -27,9 +27,21 @@ if (typeof window !== "undefined") {
  * LazySite - High Fidelity Reconstruction
  * 
  * DESIGN: Strict adherence to the provided reference image.
- * FONTS: Bogam Regular (Logo), Reign (All other text).
+ * FONTS: DXBurst (Logo), Reign (All other text).
  */
-const lifestyleImages = [
+/**
+ * WHY: Strict interface prevents untyped `as any` casts in the gallery map.
+ * noWatermark/customBottomCrop are optional display overrides per image.
+ */
+interface LifestyleImage {
+    src: string;
+    id: string;
+    caption: string;
+    noWatermark?: boolean;
+    customBottomCrop?: boolean;
+}
+
+const lifestyleImages: LifestyleImage[] = [
     { src: "https://iili.io/q5gIPQR.png", id: "03", caption: "The Glow" },
     { src: "/lazy/lifestyle/lazy_lifestyle_5_1773265526081.png", id: "05", caption: "Liquid Metal" },
     { src: "https://iili.io/qYA1han.png", id: "07", caption: "Industrial Form", noWatermark: true },
@@ -178,7 +190,7 @@ export default function LazySite() {
                 trigger: ".parallax-img",
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 1
+                scrub: true
             }
         });
 
@@ -256,7 +268,7 @@ export default function LazySite() {
                     <span className={`${styles.fontReign} text-[14px] uppercase tracking-[0.2em] font-medium text-black cursor-pointer hover:text-black/40 transition-colors`}>Story</span>
                 </div>
 
-                <div ref={navLogoRef} className={`${styles.fontBogam} absolute left-1/2 -translate-x-1/2 text-4xl text-black pointer-events-auto opacity-0 scale-75 select-none`}>
+                <div ref={navLogoRef} className={`${styles.fontBurst} absolute left-1/2 -translate-x-1/2 text-4xl text-black pointer-events-auto opacity-0 scale-75 select-none`}>
                     lazy
                 </div>
 
@@ -296,7 +308,7 @@ export default function LazySite() {
                     <IconNordicStar size={32} className={`${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer`} />
                 </div>
 
-                <div className={`${styles.fontBogam} hero-logo relative z-10 text-[40vw] md:text-[250pt] text-white leading-none select-none`}>
+                <div className={`${styles.fontBurst} hero-logo relative z-10 text-[40vw] md:text-[250pt] text-white leading-none select-none`}>
                     {hero.logoText}
                 </div>
             </section>
@@ -461,7 +473,7 @@ export default function LazySite() {
 
                     <div className="mt-16 md:mt-0">
                         <div className="flex items-center gap-2 md:gap-3 mb-2">
-                            <div className="origin-left scale-[0.65] md:scale-100 flex items-center"><IconComplexAsterisk size={32} className="text-[#121212] hover:rotate-[30deg] transition-transform duration-500" /></div>
+                            <div className="origin-left scale-[0.65] md:scale-100 flex items-center"><IconComplexAsterisk size="32" className="text-[#121212] hover:rotate-[30deg] transition-transform duration-500" /></div>
                             <h3 className="text-[28px] md:text-[48px] leading-none text-[#121212] font-normal tracking-tight">{soap.subTitle}</h3>
                         </div>
                         <p className={`${styles.fontSatoshi} text-[18px] md:text-[32px] text-[#121212]/30 font-light tracking-tight`}>
@@ -487,7 +499,7 @@ export default function LazySite() {
             {/* ── [SECTION 6] Lazy People Society ─────────── */}
             <section className="bg-white px-6 md:px-24 flex flex-col items-start pt-12 pb-24 overflow-hidden">
                 <div className="max-w-7xl w-full flex flex-row items-center gap-4 md:gap-12">
-                    <h2 className={`${styles.fontBogam} text-[15vw] md:text-[200px] text-black leading-[0.85] tracking-[0.02em] soap-line`}>
+                    <h2 className={`${styles.fontBurst} text-[15vw] md:text-[200px] text-black leading-[0.85] soap-line`}>
                         Lazy People Society
                     </h2>
                     <div className="society-icon-reveal flex-shrink-0 flex items-center h-full">
@@ -507,8 +519,8 @@ export default function LazySite() {
                                 alt={img.caption}
                                 fill
                                 className={`object-cover transition-transform duration-1000 
-                                    ${(img as any).customBottomCrop ? "scale-[1.2] translate-y-[-10%] origin-top" :
-                                        (img as any).noWatermark ? "scale-[1.1] translate-y-[-2%] translate-x-[-2%] origin-top-left" :
+                                    ${img.customBottomCrop ? "scale-[1.2] translate-y-[-10%] origin-top" :
+                                        img.noWatermark ? "scale-[1.1] translate-y-[-2%] translate-x-[-2%] origin-top-left" :
                                             "group-hover:scale-105"}`}
                                 unoptimized
                             />
@@ -524,7 +536,7 @@ export default function LazySite() {
                             </div>
 
                             <div className="absolute bottom-12 left-12 right-12 flex justify-between items-end">
-                                <span className={`${styles.fontBogam} text-[32px] md:text-[48px] text-white opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-700`}>
+                                <span className={`${styles.fontBurst} text-[32px] md:text-[48px] text-white opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-700`}>
                                     {img.caption}
                                 </span>
                                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-1000 scale-75 group-hover:scale-100">
@@ -537,7 +549,7 @@ export default function LazySite() {
                     {/* SOCIALS CTA AT THE END */}
                     <div className="gallery-item flex-shrink-0 w-[50vw] md:w-[40vw] h-[80vh] flex flex-col items-center justify-center gap-6 border-r border-black/5 bg-[#F9F9F9] px-12">
                         <span className={`${styles.fontReign} text-[14px] text-black/40 uppercase tracking-widest`}>Beyond Skin</span>
-                        <h3 className={`${styles.fontBogam} text-[56px] md:text-[80px] text-black text-center leading-none px-8`}>Join the Society</h3>
+                        <h3 className={`${styles.fontBurst} text-[56px] md:text-[80px] text-black text-center leading-none px-8`}>Join the Society</h3>
                         <button className={`${styles.fontReign} bg-black text-white px-12 py-6 text-[14px] uppercase font-medium hover:bg-[#333] transition-all rounded-full`}>
                             Follow us
                         </button>
@@ -586,7 +598,7 @@ export default function LazySite() {
                             ].map((Icon, j) => (
                                 <React.Fragment key={j}>
                                     <div className="text-black/20 hover:text-black transition-colors duration-500 scale-75 md:scale-100 flex-shrink-0">
-                                        <Icon size={64} />
+                                        <Icon size="64" />
                                     </div>
                                     <span className={`${styles.fontReign} text-[24px] md:text-[32px] text-black/10 uppercase tracking-widest pointer-events-none flex-shrink-0`}>
                                         be lazy my friend
@@ -600,7 +612,7 @@ export default function LazySite() {
 
             {/* ── [SECTION 9] Footer ────────────────────────── */}
             <footer className="py-24 md:py-40 bg-[#D9D9D9] flex flex-col items-center px-6">
-                <div className={`${styles.fontBogam} text-[25vw] md:text-[15vw] text-white select-none leading-none mb-8 md:mb-12`}>
+                <div className={`${styles.fontBurst} text-[25vw] md:text-[15vw] text-white select-none leading-none mb-8 md:mb-12`}>
                     lazy
                 </div>
                 <p className={`${styles.fontReign} text-[14px] md:text-[18px] text-black/60 font-medium text-center`}>

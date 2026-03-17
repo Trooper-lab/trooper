@@ -12,7 +12,9 @@ import { ReactNode } from "react";
  */
 
 const LazySite = dynamic(() => import("./lazy"), { ssr: false });
+const BefacoSite = dynamic(() => import("./befaco/index"), { ssr: false });
 
 export const ProjectSites: Record<string, () => ReactNode> = {
-    "laazy": () => <LazySite />
+    "laazy": () => <LazySite />,
+    "befaco": () => <BefacoSite />
 };
