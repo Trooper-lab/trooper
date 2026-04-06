@@ -1,7 +1,7 @@
 "use client";
 
 import { use, Suspense } from "react";
-import { projects } from "@/projects/data";
+import { projects, visibleProjects } from "@/projects/data";
 import { notFound, useSearchParams } from "next/navigation";
 import { ProjectSites } from "@/projects/sites";
 import { useGSAP } from "@gsap/react";
@@ -26,7 +26,8 @@ function ProjectContent({ slug }: { slug: string }) {
         return <SiteComponent />;
     }
 
-    const nextProject = projects[(projects.indexOf(project) + 1) % projects.length];
+    const visibleIdx = visibleProjects.indexOf(project);
+    const nextProject = visibleProjects[(visibleIdx >= 0 ? visibleIdx + 1 : 1) % visibleProjects.length];
 
     useGSAP(() => {
         if (!project) return;

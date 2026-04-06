@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { projects, type Project } from "@/projects/data";
+import { visibleProjects as projects, type Project } from "@/projects/data";
 
 
 /**

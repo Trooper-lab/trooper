@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-import { projects } from "@/projects/data";
+import { visibleProjects as projects } from "@/projects/data";
 
 
 /**
