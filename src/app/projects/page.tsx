@@ -70,17 +70,19 @@ function ProjectRow({ project, onHover, onLeave }: { project: Project, onHover: 
             <div className="flex items-baseline gap-4 md:gap-8">
                 <span className="font-sans text-[12px] md:text-[14px] opacity-30 font-medium">{project.id}</span>
                 <div className="flex flex-col">
-                    <Link href={`/projects/${project.slug}`}>
+                    <a href={project.externalUrl ?? `/projects/${project.slug}`} target={project.externalUrl ? '_blank' : undefined} rel={project.externalUrl ? 'noopener noreferrer' : undefined}>
                         <h2 className="font-sans text-[40px] md:text-[80px] font-medium leading-[0.9] md:leading-none tracking-tighter transition-transform md:group-hover:translate-x-4 duration-500">
                             {project.title}
                         </h2>
-                    </Link>
-                    <Link
-                        href={`/studio/${project.slug}`}
-                        className="mt-4 font-sans font-bold text-[10px] uppercase tracking-[0.3em] bg-black text-white px-4 py-2 w-max rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 hover:bg-black/80"
-                    >
-                        Launch Studio
-                    </Link>
+                    </a>
+                    {!project.externalUrl && (
+                        <Link
+                            href={`/studio/${project.slug}`}
+                            className="mt-4 font-sans font-bold text-[10px] uppercase tracking-[0.3em] bg-black text-white px-4 py-2 w-max rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 hover:bg-black/80"
+                        >
+                            Launch Studio
+                        </Link>
+                    )}
                 </div>
             </div>
 

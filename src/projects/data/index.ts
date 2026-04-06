@@ -21,6 +21,7 @@ export interface Project {
     accentColor?: string;
     year: string;
     hidden?: boolean;
+    externalUrl?: string;
     assets?: {
         [key: string]: string;
     }
