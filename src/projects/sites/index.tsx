@@ -14,9 +14,11 @@ import { ReactNode } from "react";
 const LazySite = dynamic(() => import("./lazy"), { ssr: false });
 const BefacoSite = dynamic(() => import("./befaco/index"), { ssr: false });
 const VCMCPage = dynamic(() => import("./befaco/vcmc"), { ssr: false });
+const SuperfluidSite = dynamic(() => import("./superfluid/index"), { ssr: false });
 
 export const ProjectSites: Record<string, () => ReactNode> = {
     "laazy": () => <LazySite />,
     "befaco": () => <BefacoSite />,
     "vcmc": () => <VCMCPage />,
+    "superfluid": () => <SuperfluidSite />,
 };

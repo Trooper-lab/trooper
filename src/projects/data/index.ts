@@ -7,6 +7,7 @@
 
 import { lazyConfig } from "../configs/laazy";
 import { befacoConfig } from "../configs/befaco";
+import { superfluidConfig } from "../configs/superfluid";
 
 export interface Project {
     id: string;
@@ -27,6 +28,7 @@ export interface Project {
 export const projects: Project[] = [
     lazyConfig,
     befacoConfig,
+    superfluidConfig,
     {
         id: "befaco-vcmc",
         slug: "vcmc",
