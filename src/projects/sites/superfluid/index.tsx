@@ -48,7 +48,7 @@ export default function SuperfluidSite() {
             <header className={styles.header}>
                 <span className={styles.logo}>Superfluid</span>
                 <a
-                    href="https://superfluid.school"
+                    href="https://superfluid.work"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.headerCta}
@@ -75,7 +75,7 @@ export default function SuperfluidSite() {
                     </p>
                     <div className={styles.heroCtas}>
                         <a
-                            href="https://superfluid.school"
+                            href="https://superfluid.work"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.ctaPrimary}
@@ -144,7 +144,7 @@ export default function SuperfluidSite() {
                         Join educators already saving hours every week. Free to start — no credit card required.
                     </p>
                     <a
-                        href="https://superfluid.school"
+                        href="https://superfluid.work"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.ctaBandButton}

@@ -10,6 +10,6 @@ export const superfluidConfig = {
     accentColor: "#ffffff",
     year: "2025",
     assets: {
-        liveUrl: "https://superfluid.school"
+        liveUrl: "https://superfluid.work"
     }
 };
