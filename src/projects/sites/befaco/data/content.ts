@@ -5,15 +5,14 @@ export const befacoContent = {
     },
     hook: {
         note: "Series 2025 — Technical Specification",
-        title: "Built by musicians, for musicians. With a heavy focus on DIY."
+        title: "Modular synthesizers designed and assembled in Barcelona — available as finished instruments, DIY kits, and hands-on workshops."
     },
     products: [
         {
             id: "lich",
             name: "Lich",
             price: "$349.00",
-            // WHY: Lich module product page image from Befaco's official CDN
-            image: "https://befaco.org/wp-content/uploads/2020/05/lich-front.jpg",
+            image: "https://iili.io/BRFy6Pe.png",
             tagline: "The OWL in Eurorack format.",
             details: {
                 specs: "Programmable via C++, Faust, Pure Data, or Max/Gen.",
@@ -25,8 +24,7 @@ export const befacoContent = {
             id: "vcmc",
             name: "VCMC",
             price: "$300.00",
-            // WHY: VCMC module official image from Befaco's product page
-            image: "https://befaco.org/wp-content/uploads/2019/10/vcmc-front.jpg",
+            image: "https://iili.io/BRKozjn.png",
             tagline: "Voltage Controlled MIDI Controller.",
             details: {
                 specs: "8 CV inputs, 8 Gate inputs, MIDI Out.",
@@ -38,8 +36,7 @@ export const befacoContent = {
             id: "burst",
             name: "Burst",
             price: "$180.00",
-            // WHY: Burst module official image from Befaco's product page
-            image: "https://befaco.org/wp-content/uploads/2019/10/burst-front.jpg",
+            image: "https://iili.io/BRKoBYN.png",
             tagline: "Rhythmic generator for percussive patches.",
             details: {
                 specs: "Internal or External Clock, pingable, probability control.",
@@ -57,6 +54,6 @@ export const befacoContent = {
         ]
     },
     footer: {
-        note: "Design. Patch. Repeat."
+        note: "Solder. Patch. Repeat."
     }
 };

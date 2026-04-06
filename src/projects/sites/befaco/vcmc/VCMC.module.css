@@ -1,0 +1,206 @@
+/* VCMC Product Page */
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #0f0e12;
+    color: #f5f5f5;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+/* Nav */
+.nav {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    border-bottom: 0.1vw solid rgba(178,178,178,0.2);
+}
+
+.back {
+    background: transparent;
+    border: none;
+    color: #f05a24;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.back:hover { opacity: 0.7; }
+
+.navLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.3;
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
+    border-bottom: 0.1vw solid rgba(178,178,178,0.2);
+}
+
+.heroImage {
+    position: relative;
+    border-right: 0.1vw solid rgba(178,178,178,0.2);
+    background: #0a0a0d;
+    min-height: 50vw;
+    padding: 4vw;
+}
+
+.heroContent {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #b2b2b2;
+    opacity: 0.7;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #f05a24;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.65;
+    max-width: 44ch;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.ctaPrimary {
+    padding: 16px 32px;
+    background: #f05a24;
+    color: #f5f5f5;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.ctaPrimary:hover { opacity: 0.85; }
+
+.ctaSecondary {
+    padding: 16px 32px;
+    background: transparent;
+    color: #f5f5f5;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: 0.1vw solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.ctaSecondary:hover {
+    background: #f5f5f5;
+    color: #0f0e12;
+}
+
+/* Detail grid */
+.detailGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 0.1vw solid rgba(178,178,178,0.2);
+}
+
+.detailCol {
+    padding: 4vw 3vw;
+    border-right: 0.1vw solid rgba(178,178,178,0.2);
+}
+
+.detailCol:last-child { border-right: none; }
+
+.colHeading {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: #f05a24;
+    margin-bottom: 2vw;
+    font-weight: 400;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.listItem {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.65;
+    display: flex;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.dash {
+    color: #f05a24;
+    flex-shrink: 0;
+}
+
+.resourceItem {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s, color 0.2s;
+    padding: 10px 0;
+    border-bottom: 0.1vw solid rgba(178,178,178,0.1);
+    list-style: none;
+}
+
+.resourceItem:hover {
+    opacity: 1;
+    color: #f05a24;
+}
+
+.note {
+    font-size: 11px;
+    opacity: 0.3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 2vw;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 3vw;
+    border-top: 0.1vw solid rgba(178,178,178,0.1);
+}

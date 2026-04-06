@@ -28,6 +28,17 @@ export const projects: Project[] = [
     lazyConfig,
     befacoConfig,
     {
+        id: "befaco-vcmc",
+        slug: "vcmc",
+        title: "VCMC",
+        description: "Voltage Controlled MIDI Controller — 8 faders, 8 buttons, 10 CV inputs.",
+        whatWeDid: ["Product Page", "Eurorack Module"],
+        brief: "VCMC product page.",
+        color: "#0f0e12",
+        secondaryColor: "#f05a24",
+        year: "2025"
+    },
+    {
         id: "03",
         slug: "magicalbutter",
         title: "Magicalbutter.com",
