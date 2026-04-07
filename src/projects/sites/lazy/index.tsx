@@ -283,17 +283,14 @@ export default function LazySite() {
             {/* ── [SECTION 1] Hero ─────────────────────────── */}
             <section id="hero-section" className="h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#121212]">
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                    <div className={styles.heroVideoContainer}>
-                        <iframe
-                            src="https://streamable.com/e/5ctu8o?autoplay=1&muted=1&loop=1&background=1&autopause=0"
-                            frameBorder="0"
-                            width="100%"
-                            height="100%"
-                            allow="autoplay; fullscreen"
-                            allowFullScreen
-                            className={styles.heroVideoIframe}
-                        ></iframe>
-                    </div>
+                    <Image
+                        src="https://iili.io/q5UDMRs.png"
+                        alt="Laazy hero"
+                        fill
+                        className="object-cover"
+                        unoptimized
+                        priority
+                    />
                 </div>
 
                 <div className="absolute top-8 left-8 md:left-12 z-10 hidden md:flex gap-8 items-center text-white/90">
