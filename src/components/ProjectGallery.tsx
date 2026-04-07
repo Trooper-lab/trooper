@@ -174,21 +174,19 @@ export function ProjectGallery() {
 
                                         <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
                                             <a
-                                                href={project.externalUrl ?? `/projects/${project.slug}`}
-                                                target={project.externalUrl ? '_blank' : undefined}
-                                                rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+                                                href={`/projects/${project.slug}`}
                                                 className="font-sans font-medium text-[14px] md:text-[16px] underline underline-offset-8 hover:opacity-50 transition-opacity uppercase tracking-widest"
                                             >
-                                                {project.externalUrl ? 'Visit Site' : 'View Case Study'}
+                                                View Case Study
                                             </a>
-                                            {!project.externalUrl && (
-                                                <a
-                                                    href={`/studio/${project.slug}`}
-                                                    className="font-sans font-bold text-[12px] md:text-[14px] px-6 py-2.5 bg-black text-white hover:bg-black/80 transition-all uppercase tracking-[0.2em] rounded-sm shadow-lg w-max"
-                                                >
-                                                    Launch Studio
-                                                </a>
-                                            )}
+                                            <a
+                                                href={project.externalUrl ?? `/studio/${project.slug}`}
+                                                target={project.externalUrl ? '_blank' : undefined}
+                                                rel={project.externalUrl ? 'noopener noreferrer' : undefined}
+                                                className="font-sans font-bold text-[12px] md:text-[14px] px-6 py-2.5 bg-black text-white hover:bg-black/80 transition-all uppercase tracking-[0.2em] rounded-sm shadow-lg w-max"
+                                            >
+                                                Visit Site
+                                            </a>
                                         </div>
                                     </div>
 
