@@ -1,0 +1,243 @@
+/* Lazy Case Study — editorial, brand-forward */
+
+.article {
+    background: #121212;
+    color: #F2F2F2;
+    min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroMeta {
+    display: flex;
+    gap: 32px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    opacity: 0.35;
+    margin-bottom: 32px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.heroTitle {
+    font-size: clamp(96px, 18vw, 240px);
+    font-weight: 500;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    margin-bottom: 48px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+}
+
+.heroSub {
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0.5;
+    max-width: 560px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Full bleed ── */
+.fullBleed {
+    width: 100%;
+}
+
+/* ── Image placeholder ── */
+.imagePlaceholder {
+    width: 100%;
+    background: #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.imagePlaceholderLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    opacity: 0.25;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 24px;
+    text-align: center;
+}
+
+/* ── Section ── */
+.section {
+    padding: 96px 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sectionGrid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionMeta {
+    padding-top: 6px;
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    opacity: 0.3;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Typography ── */
+.heading {
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-family: 'Space Grotesk', sans-serif;
+    max-width: 720px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.bodyLarge {
+    font-size: clamp(18px, 1.8vw, 24px);
+    line-height: 1.65;
+    opacity: 0.7;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+}
+
+.body {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.5;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    max-width: 680px;
+}
+
+/* ── Pull quote ── */
+.pullQuote {
+    padding: 96px 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pullQuote blockquote {
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    max-width: 900px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* ── Image layouts ── */
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.twoCol > * {
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.twoCol > *:last-child {
+    border-right: none;
+}
+
+.threeCol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.threeCol > * {
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.threeCol > *:last-child {
+    border-right: none;
+}
+
+/* ── Deliverables ── */
+.deliverables {
+    display: flex;
+    flex-direction: column;
+}
+
+.deliverable {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    align-items: start;
+}
+
+.deliverable:first-child {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.deliverableN {
+    font-size: 11px;
+    font-family: monospace;
+    opacity: 0.25;
+    padding-top: 4px;
+    color: #fff;
+}
+
+.deliverableTitle {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+
+.deliverableBody {
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: 0.45;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .hero { padding: 60px 24px; min-height: 70vh; }
+    .heroMeta { gap: 16px; flex-wrap: wrap; }
+    .section { padding: 64px 24px; }
+    .sectionGrid { grid-template-columns: 1fr; gap: 16px; }
+    .pullQuote { padding: 64px 24px; }
+    .twoCol { grid-template-columns: 1fr; }
+    .twoCol > * { border-right: none; }
+    .threeCol { grid-template-columns: 1fr; }
+    .threeCol > * { border-right: none; }
+}
