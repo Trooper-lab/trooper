@@ -28,6 +28,12 @@ export default function StudioPage({ params }: { params: Promise<{ slug: string 
 
     if (!project) notFound();
 
+    useEffect(() => {
+        if (project.externalUrl) {
+            window.location.href = project.externalUrl;
+        }
+    }, [project.externalUrl]);
+
     // Auto-start build on mount if idle
     useEffect(() => {
         if (status === 'idle') {
