@@ -147,14 +147,12 @@ function FooterInner() {
                     />
 
                     {/* Send */}
-                    <div className="w-full flex items-center justify-between">
-                        <div className="flex-1">
-                            {status === "error" && (
-                                <span className="text-red-500/80 font-sans text-[14px] tracking-wide">
-                                    Something went wrong — please try again.
-                                </span>
-                            )}
-                        </div>
+                    {status === "error" && (
+                        <span className="text-red-500/80 font-sans text-[14px] tracking-wide">
+                            Something went wrong — please try again.
+                        </span>
+                    )}
+                    <div className="w-full flex justify-end">
                         <button
                             onClick={handleSubmit}
                             disabled={status === "sending" || !hasContent}
