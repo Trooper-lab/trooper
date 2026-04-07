@@ -155,19 +155,15 @@ function FooterInner() {
                                 </span>
                             )}
                         </div>
-                        <div
-                            className="transition-all duration-500 ease-out"
-                            style={{
-                                opacity: hasContent ? 1 : 0,
-                                transform: hasContent ? "translateY(0)" : "translateY(20px)",
-                                pointerEvents: hasContent ? "auto" : "none",
-                            }}
+                        <button
+                            onClick={handleSubmit}
+                            disabled={status === "sending" || !hasContent}
+                            className={`group relative flex items-center gap-4 px-8 py-4 uppercase tracking-[0.2em] text-[13px] font-medium overflow-hidden transition-all duration-500 border ${
+                                hasContent
+                                    ? "bg-foreground text-background border-foreground"
+                                    : "bg-transparent text-foreground/40 border-foreground/20 cursor-default"
+                            }`}
                         >
-                            <button
-                                onClick={handleSubmit}
-                                disabled={status === "sending"}
-                                className="group relative flex items-center gap-4 bg-foreground text-background px-8 py-4 uppercase tracking-[0.2em] text-[13px] font-medium overflow-hidden disabled:opacity-50 transition-opacity"
-                            >
                                 <span className="relative z-10 transition-transform duration-300 group-hover:-translate-y-[150%]">
                                     {status === "sending" ? "Sending..." : "Send message"}
                                 </span>
@@ -176,7 +172,6 @@ function FooterInner() {
                                 </span>
                                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
                             </button>
-                        </div>
                     </div>
                 </div>
             </div>
