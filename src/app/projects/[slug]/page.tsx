@@ -19,25 +19,13 @@ function ProjectContent({ slug }: { slug: string }) {
     const isViewer = searchParams.get("viewer") === "true";
     const project = projects.find((p) => p.slug === slug);
 
-    if (!project) notFound();
+    const isCustomView = (isViewer && !!ProjectSites[slug]) || !!ProjectCaseStudies[slug];
 
-    // If we are in the Studio Viewer, render the actual site draft
-    if (isViewer && ProjectSites[slug]) {
-        const SiteComponent = ProjectSites[slug];
-        return <SiteComponent />;
-    }
-
-    // If a custom case study exists, render it
-    if (ProjectCaseStudies[slug]) {
-        const CaseStudy = ProjectCaseStudies[slug];
-        return <CaseStudy />;
-    }
-
-    const visibleIdx = visibleProjects.indexOf(project);
+    const visibleIdx = project ? visibleProjects.indexOf(project) : -1;
     const nextProject = visibleProjects[(visibleIdx >= 0 ? visibleIdx + 1 : 1) % visibleProjects.length];
 
     useGSAP(() => {
-        if (!project) return;
+        if (!project || isCustomView) return;
         gsap.from(".project-title", {
             y: 100,
             opacity: 0,
@@ -62,6 +50,20 @@ function ProjectContent({ slug }: { slug: string }) {
             );
         });
     }, { dependencies: [slug] });
+
+    if (!project) notFound();
+
+    // If we are in the Studio Viewer, render the actual site draft
+    if (isViewer && ProjectSites[slug]) {
+        const SiteComponent = ProjectSites[slug];
+        return <SiteComponent />;
+    }
+
+    // If a custom case study exists, render it
+    if (ProjectCaseStudies[slug]) {
+        const CaseStudy = ProjectCaseStudies[slug];
+        return <CaseStudy />;
+    }
 
     return (
         <main className="min-h-screen bg-background text-foreground selection:bg-black selection:text-white">
