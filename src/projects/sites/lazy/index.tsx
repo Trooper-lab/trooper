@@ -298,11 +298,13 @@ export default function LazySite() {
                     <span className={`${styles.fontReign} text-[14px] uppercase tracking-[0.2em] font-medium cursor-pointer hover:text-white/40 transition-colors`}>Story</span>
                 </div>
 
-                <div className="absolute top-8 right-8 md:right-12 z-10 flex gap-6 md:gap-10 items-center text-white/60">
-                    <IconJaggedStar size={32} className={`${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer`} />
-                    <IconProfile size={32} className={`${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer hover:text-white`} />
-                    <IconCart size={32} className={`${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer hover:text-white`} />
-                    <IconNordicStar size={32} className={`${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer`} />
+                <div className="absolute top-8 right-8 md:right-12 z-10 flex gap-5 md:gap-10 items-center text-white/60">
+                    <IconProfile size={26} className={`md:hidden ${styles.softResponse} transition-all cursor-pointer hover:text-white`} />
+                    <IconCart size={26} className={`md:hidden ${styles.softResponse} transition-all cursor-pointer hover:text-white`} />
+                    <IconJaggedStar size={32} className={`hidden md:block ${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer`} />
+                    <IconProfile size={32} className={`hidden md:block ${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer hover:text-white`} />
+                    <IconCart size={32} className={`hidden md:block ${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer hover:text-white`} />
+                    <IconNordicStar size={32} className={`hidden md:block ${styles.softResponse} ${styles.hoverSoftResponse} transition-all cursor-pointer`} />
                 </div>
 
                 <div className={`${styles.fontBurst} hero-logo relative z-10 text-[40vw] md:text-[250pt] text-white leading-none select-none`}>
@@ -325,7 +327,7 @@ export default function LazySite() {
             </section>
 
             {/* ── [SECTION 3] Immersive Product Carousel ───── */}
-            <section className="bg-white px-6 md:px-24 h-screen flex flex-col items-center justify-center py-12">
+            <section className="bg-white px-6 md:px-24 min-h-screen flex flex-col items-center justify-center py-16 md:py-12">
                 <div className="max-w-7xl w-full">
                     <div className="relative w-full flex flex-col items-center">
                         <div className="absolute left-[-10px] md:left-0 top-1/2 -translate-y-1/2 z-10">
@@ -459,7 +461,7 @@ export default function LazySite() {
 
             {/* ── [SECTION 5] Soap Story ───────────────────── */}
             <section className="bg-white min-h-screen pt-24 md:pt-32 pb-12 px-6 md:px-24 flex flex-col md:flex-row items-center justify-center gap-12 max-w-full mx-auto relative overflow-hidden">
-                <div className={`${styles.fontReign} flex-1 md:w-2/5 w-full max-w-xl text-left flex flex-col justify-between py-12 md:py-8 min-h-[500px] md:min-h-[777px] relative z-10 -translate-x-[50px] md:-translate-x-[150px]`}>
+                <div className={`${styles.fontReign} flex-1 md:w-2/5 w-full max-w-xl text-left flex flex-col justify-between py-12 md:py-8 min-h-[auto] md:min-h-[777px] relative z-10 translate-x-0 md:-translate-x-[150px]`}>
                     <div className="flex flex-col gap-1">
                         {soap.story.map((line, i) => (
                             <p key={i} className="soap-line text-[24px] md:text-[32px] leading-[1.1] text-[#121212] font-normal mb-0 tracking-tight">
@@ -479,7 +481,7 @@ export default function LazySite() {
                     </div>
                 </div>
 
-                <div className="absolute top-0 right-0 w-full h-full md:w-[70vw] z-0 pointer-events-none">
+                <div className="relative w-full h-[380px] md:absolute md:top-0 md:right-0 md:w-[70vw] md:h-full z-0 pointer-events-none">
                     {/* BALANCED LARGE SCALE: Reduced from 2.2x to 1.2x to stop text overlap while remaining "really big" */}
                     <div className="relative w-full h-full scale-[1.1] md:scale-[1.2] translate-y-[calc(10%-20px)] md:translate-y-[-20px] translate-x-[calc(10%-20px-100px)] md:translate-x-[calc(5%-20px-100px)]">
                         <Image
@@ -506,8 +508,24 @@ export default function LazySite() {
                 </div>
             </section>
 
-            {/* ── [SECTION 7] Horizontal Lifestyle Scroll ──── */}
-            <section ref={horizontalWrapperRef} className="horizontal-section bg-white h-screen overflow-hidden flex items-start">
+            {/* ── [SECTION 7] Lifestyle Gallery — Mobile ──── */}
+            <section className="md:hidden bg-white">
+                <div className={styles.mobileGallery}>
+                    {lifestyleImages.map((img, i) => (
+                        <div key={i} className={styles.mobileGalleryItem}>
+                            <Image src={img.src} alt={img.caption} fill className="object-cover" unoptimized />
+                            <span className={styles.mobileGalleryCaption}>{img.caption}</span>
+                        </div>
+                    ))}
+                    <div className={`${styles.mobileGalleryItem} flex flex-col items-center justify-center gap-3 bg-[#F9F9F9]`}>
+                        <span className={`${styles.fontBurst} text-[32px] text-black text-center leading-none px-4`}>Join the Society</span>
+                        <button className={`${styles.fontReign} bg-black text-white px-8 py-3 text-[12px] uppercase font-medium rounded-full`}>Follow us</button>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── [SECTION 7] Horizontal Lifestyle Scroll — Desktop ──── */}
+            <section ref={horizontalWrapperRef} className="horizontal-section bg-white h-screen overflow-hidden hidden md:flex items-start">
                 <div ref={galleryRef} className="gallery-inner flex flex-nowrap h-full items-start gap-0">
                     {lifestyleImages.map((img, i) => (
                         <div key={i} className="gallery-item flex-shrink-0 w-[70vw] md:w-[60vw] h-[90vh] relative group overflow-hidden border-r border-black/5 bg-[#F9F9F9]">

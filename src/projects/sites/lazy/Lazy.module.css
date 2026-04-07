@@ -207,3 +207,45 @@ html.lenis body {
   pointer-events: none;
   border: none;
 }
+
+/* ── Mobile Overrides (max-width: 768px) ── */
+@media (max-width: 768px) {
+
+  /* Video: reduce scale so it's not completely cropped */
+  .videoContainer {
+    height: 55vh;
+  }
+
+  .videoIframe {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  /* Mobile lifestyle gallery: simple vertical stack */
+  .mobileGallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: #f9f9f9;
+  }
+
+  .mobileGalleryItem {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+
+  .mobileGalleryCaption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0.3);
+    padding: 4px 8px;
+    backdrop-filter: blur(4px);
+  }
+}
