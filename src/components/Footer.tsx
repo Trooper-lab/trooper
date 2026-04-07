@@ -152,7 +152,7 @@ function FooterInner() {
                             Something went wrong — please try again.
                         </span>
                     )}
-                    <div className="w-full flex justify-end">
+                    <div className="w-full flex justify-start">
                         <button
                             onClick={handleSubmit}
                             disabled={status === "sending" || !hasContent}
