@@ -17,9 +17,9 @@ export const lazyConfig = {
     accentColor: "#70F3D3", // Mint/Teal accent
     year: "2025",
     assets: {
-        hero: "https://iili.io/q5gIPQR.png",
+        hero: "https://iili.io/B75yMlI.png",
         product: "/lazy/products/lazy_soap_01.png",
         lifestyle: "https://iili.io/qYA1han.png",
-        preview: "https://iili.io/q5gIPQR.png"
+        preview: "https://iili.io/B75yMlI.png"
     }
 };
