@@ -19,7 +19,7 @@ export const befacoConfig = {
     assets: {
         logo: "https://iili.io/qWdwbAx.png",
         // WHY: Using Befaco's official Lich module page image as the hero — matches the industrial hardware aesthetic
-        hero: "https://iili.io/BRFRXjI.jpg",
-        preview: "https://befaco.org/wp-content/uploads/2020/05/lich-front.jpg"
+        hero: "https://iili.io/B77RAgI.png",
+        preview: "https://iili.io/B77RAgI.png"
     }
 };
