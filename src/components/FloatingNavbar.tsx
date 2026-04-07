@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import { ProjectCaseStudies } from "@/projects/case-studies";
 
 /**
  * Floating Navbar Architecture: Industrial Pill
@@ -81,7 +82,9 @@ export function FloatingNavbar() {
 function FloatingNavbarContent() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    const projectSlug = pathname?.startsWith("/projects/") ? pathname.split("/")[2] : null;
     const isStudio = pathname?.startsWith("/studio") || searchParams.get("viewer") === "true";
+    const isCaseStudy = !!(projectSlug && ProjectCaseStudies[projectSlug]);
     
     const containerRef = useRef<HTMLDivElement>(null);
     const lastScrollY = useRef(0);
@@ -124,8 +127,8 @@ function FloatingNavbarContent() {
         });
     }, [isHidden]);
 
-    // Don't render the main navbar if we're in the studio (it has its own floating header)
-    if (isStudio) return null;
+    // Don't render the main navbar if we're in the studio or on a custom case study
+    if (isStudio || isCaseStudy) return null;
 
     return (
         <div className="fixed top-8 left-0 w-full flex justify-center z-[150] pointer-events-none">
