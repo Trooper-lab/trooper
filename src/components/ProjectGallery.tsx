@@ -129,7 +129,7 @@ export function ProjectGallery() {
                 {projects.map((project, index) => (
                     <div
                         key={project.id}
-                        className="project-slide absolute inset-0 w-full h-full overflow-hidden"
+                        className={`project-slide absolute inset-0 w-full h-full overflow-hidden ${index !== activeSlide ? 'pointer-events-none' : ''}`}
                         style={{ zIndex: index + 1 }}
                     >
                         <div className="slide__outer w-full h-full overflow-hidden will-change-transform">
