@@ -4,6 +4,7 @@ import { use, Suspense } from "react";
 import { projects, visibleProjects } from "@/projects/data";
 import { notFound, useSearchParams } from "next/navigation";
 import { ProjectSites } from "@/projects/sites";
+import { ProjectCaseStudies } from "@/projects/case-studies";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,6 +25,12 @@ function ProjectContent({ slug }: { slug: string }) {
     if (isViewer && ProjectSites[slug]) {
         const SiteComponent = ProjectSites[slug];
         return <SiteComponent />;
+    }
+
+    // If a custom case study exists, render it
+    if (ProjectCaseStudies[slug]) {
+        const CaseStudy = ProjectCaseStudies[slug];
+        return <CaseStudy />;
     }
 
     const visibleIdx = visibleProjects.indexOf(project);

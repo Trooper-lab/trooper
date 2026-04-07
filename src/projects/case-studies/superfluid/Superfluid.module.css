@@ -1,0 +1,316 @@
+/* Superfluid Case Study */
+
+.article {
+    background: #F2F2F2;
+    color: #111111;
+    min-height: 100vh;
+}
+
+/* ── Hero ── */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 80px 48px 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    background: #F2F2F2;
+    position: relative;
+}
+
+.heroMeta {
+    display: flex;
+    gap: 32px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    opacity: 0.4;
+    margin-bottom: 32px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.heroTitle {
+    font-size: clamp(72px, 14vw, 180px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    tracking: tighter;
+    margin-bottom: 40px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.heroSub {
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.6;
+    max-width: 600px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Full bleed ── */
+.fullBleed {
+    width: 100%;
+}
+
+/* ── Image placeholder ── */
+.imagePlaceholder {
+    width: 100%;
+    background: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: relative;
+}
+
+.imagePlaceholderLabel {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.35;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 24px;
+    text-align: center;
+}
+
+/* ── Section ── */
+.section {
+    padding: 96px 48px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sectionGrid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionMeta {
+    padding-top: 6px;
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    opacity: 0.4;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Typography ── */
+.heading {
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-family: 'Space Grotesk', sans-serif;
+    max-width: 720px;
+    margin-bottom: 8px;
+}
+
+.bodyLarge {
+    font-size: clamp(18px, 1.8vw, 24px);
+    line-height: 1.6;
+    opacity: 0.8;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+}
+
+.body {
+    font-size: 16px;
+    line-height: 1.75;
+    opacity: 0.6;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    max-width: 680px;
+}
+
+/* ── Stats ── */
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.stat {
+    padding: 48px;
+    border-right: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.statValue {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.statLabel {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.4;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Image layouts ── */
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.twoCol > * {
+    border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.twoCol > *:last-child {
+    border-right: none;
+}
+
+.threeCol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.threeCol > * {
+    border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.threeCol > *:last-child {
+    border-right: none;
+}
+
+/* ── Deliverables ── */
+.deliverables {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.deliverable {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    align-items: start;
+}
+
+.deliverable:first-child {
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.deliverableN {
+    font-size: 11px;
+    font-family: monospace;
+    opacity: 0.3;
+    padding-top: 4px;
+}
+
+.deliverableTitle {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.deliverableBody {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.55;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ── Stack ── */
+.stackGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.stackItem {
+    padding: 28px 32px;
+    border-right: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stackItem:nth-child(3n) {
+    border-right: none;
+}
+
+.stackTech {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.stackRole {
+    font-size: 12px;
+    opacity: 0.45;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ── Visit link ── */
+.visitLink {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding-bottom: 4px;
+    transition: opacity 0.2s;
+}
+
+.visitLink:hover {
+    opacity: 0.5;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .hero { padding: 60px 24px; min-height: 70vh; }
+    .heroMeta { gap: 16px; flex-wrap: wrap; }
+    .section { padding: 64px 24px; }
+    .sectionGrid { grid-template-columns: 1fr; gap: 16px; }
+    .statsRow { grid-template-columns: repeat(2, 1fr); }
+    .stat { padding: 28px 24px; }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(3) { border-right: 1px solid rgba(0,0,0,0.08); }
+    .twoCol { grid-template-columns: 1fr; }
+    .twoCol > * { border-right: none; }
+    .threeCol { grid-template-columns: 1fr; }
+    .threeCol > * { border-right: none; }
+    .stackGrid { grid-template-columns: 1fr 1fr; }
+    .stackItem:nth-child(3n) { border-right: 1px solid rgba(0,0,0,0.08); }
+    .stackItem:nth-child(2n) { border-right: none; }
+}
