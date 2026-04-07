@@ -315,8 +315,8 @@ export default function LazySite() {
             {/* ── [SECTION 2] The Hook (48pt Rhythm) ─────── */}
             <section className="bg-white px-6 md:px-24 flex flex-col items-center py-12">
                 <div className="max-w-7xl w-full">
-                    <div className="text-left py-8">
-                        <p className={`${styles.fontSatoshi} text-[14pt] md:text-[18pt] text-[#7A7A7A] mb-6 md:mb-8 leading-[1.2] max-w-2xl font-light`}>
+                    <div className="text-center md:text-left py-8">
+                        <p className={`${styles.fontSatoshi} text-[14pt] md:text-[18pt] text-[#7A7A7A] mb-6 md:mb-8 leading-[1.2] max-w-2xl font-light mx-auto md:mx-0`}>
                             {hook.note}
                         </p>
                         <h2 className={`${styles.fontReign} text-[24pt] md:text-[32pt] font-normal text-[#121212] leading-[1.1]`}>
@@ -383,8 +383,8 @@ export default function LazySite() {
 
             {/* ── [SECTION 3.5] Ingredients (The Truth) ────── */}
             <section className="bg-white px-6 md:px-24 py-12 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24 overflow-hidden">
-                <div className="max-w-md w-full">
-                    <div className="flex flex-col gap-8 md:gap-10">
+                <div className="max-w-md w-full mx-auto md:mx-0">
+                    <div className="flex flex-col gap-8 md:gap-10 text-center md:text-left items-center md:items-start">
                         <p className={`${styles.fontReign} text-[18px] md:text-[24px] text-[#121212] font-normal leading-[1.1] tracking-tight reveal-text`}>
                             Turns out healthy skin isn’t that complicated. You need a handful of good things.
                         </p>
@@ -461,8 +461,8 @@ export default function LazySite() {
 
             {/* ── [SECTION 5] Soap Story ───────────────────── */}
             <section className="bg-white min-h-screen pt-24 md:pt-32 pb-12 px-6 md:px-24 flex flex-col md:flex-row items-center justify-center gap-12 max-w-full mx-auto relative overflow-hidden">
-                <div className={`${styles.fontReign} flex-1 md:w-2/5 w-full max-w-xl text-left flex flex-col justify-between py-12 md:py-8 min-h-[auto] md:min-h-[777px] relative z-10 translate-x-0 md:-translate-x-[150px]`}>
-                    <div className="flex flex-col gap-1">
+                <div className={`${styles.fontReign} flex-1 md:w-2/5 w-full max-w-xl text-center md:text-left flex flex-col items-center md:items-start justify-between py-12 md:py-8 min-h-[auto] md:min-h-[777px] relative z-10 translate-x-0 md:-translate-x-[150px]`}>
+                    <div className="flex flex-col gap-1 items-center md:items-start">
                         {soap.story.map((line, i) => (
                             <p key={i} className="soap-line text-[24px] md:text-[32px] leading-[1.1] text-[#121212] font-normal mb-0 tracking-tight">
                                 {line}
@@ -470,12 +470,12 @@ export default function LazySite() {
                         ))}
                     </div>
 
-                    <div className="mt-16 md:mt-0">
+                    <div className="mt-16 md:mt-0 flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-2 md:gap-3 mb-2">
                             <div className="origin-left scale-[0.65] md:scale-100 flex items-center"><IconComplexAsterisk size="32" className="text-[#121212] hover:rotate-[30deg] transition-transform duration-500" /></div>
                             <h3 className="text-[28px] md:text-[48px] leading-none text-[#121212] font-normal tracking-tight">{soap.subTitle}</h3>
                         </div>
-                        <p className={`${styles.fontSatoshi} text-[18px] md:text-[32px] text-[#121212]/30 font-light tracking-tight`}>
+                        <p className={`${styles.fontSatoshi} text-[18px] md:text-[32px] text-[#121212]/30 font-light tracking-tight text-center md:text-left`}>
                             Dermatologists hate how simple this is.
                         </p>
                     </div>
@@ -483,7 +483,7 @@ export default function LazySite() {
 
                 <div className="relative w-full h-[380px] md:absolute md:top-0 md:right-0 md:w-[70vw] md:h-full z-0 pointer-events-none">
                     {/* BALANCED LARGE SCALE: Reduced from 2.2x to 1.2x to stop text overlap while remaining "really big" */}
-                    <div className="relative w-full h-full scale-[1.1] md:scale-[1.2] translate-y-[calc(10%-20px)] md:translate-y-[-20px] translate-x-[calc(10%-20px-100px)] md:translate-x-[calc(5%-20px-100px)]">
+                    <div className="relative w-full h-full md:scale-[1.2] md:translate-y-[-20px] md:translate-x-[calc(5%-20px-100px)]">
                         <Image
                             src={soap.image}
                             alt="Soap Visual"
@@ -496,8 +496,8 @@ export default function LazySite() {
             </section>
 
             {/* ── [SECTION 6] Lazy People Society ─────────── */}
-            <section className="bg-white px-6 md:px-24 flex flex-col items-start pt-12 pb-24 overflow-hidden">
-                <div className="max-w-7xl w-full flex flex-row items-center gap-4 md:gap-12">
+            <section className="bg-white px-6 md:px-24 flex flex-col items-center md:items-start pt-12 pb-24 overflow-hidden">
+                <div className="max-w-7xl w-full flex flex-row items-center justify-center md:justify-start gap-4 md:gap-12">
                     <h2 className={`${styles.fontBurst} text-[15vw] md:text-[200px] text-black leading-[0.85] soap-line`}>
                         Lazy People Society
                     </h2>
