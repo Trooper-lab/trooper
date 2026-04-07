@@ -9,5 +9,8 @@ export const superfluidConfig = {
     secondaryColor: "#FBBF24",
     accentColor: "#ffffff",
     year: "2025",
-    externalUrl: "https://superfluid.work"
+    externalUrl: "https://superfluid.work",
+    assets: {
+        preview: "https://iili.io/B5bjoOJ.png"
+    }
 };
