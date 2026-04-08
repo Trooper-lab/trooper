@@ -45,13 +45,14 @@ export const projects: Project[] = [
     },
     {
         id: "04",
-        slug: "hashstraat",
-        title: "Hashstraat",
+        slug: "hashstrat",
+        title: "Hashstrat",
         description: "A headless commerce storefront that turns product discovery into a cinematic scroll experience.",
         whatWeDid: ["Headless Commerce", "Next.js", "GSAP Animations", "Brand Strategy"],
-        brief: "Hashstraat is a deep-dive into the future of decentralised retail. We built a headless Shopify storefront that uses anti-gravity scroll mechanics to guide users through its product universe.",
+        brief: "Hashstrat is a deep-dive into the future of decentralised retail. We built a headless Shopify storefront that uses anti-gravity scroll mechanics to guide users through its product universe.",
         color: "#BFB8AF",
-        year: "2024"
+        year: "2024",
+        externalUrl: "https://hashstrat.io/"
     }
 ];
 
