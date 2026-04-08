@@ -52,7 +52,8 @@ export const projects: Project[] = [
         brief: "Hashstrat is a deep-dive into the future of decentralised retail. We built a headless Shopify storefront that uses anti-gravity scroll mechanics to guide users through its product universe.",
         color: "#BFB8AF",
         year: "2024",
-        externalUrl: "https://hashstrat.io/"
+        externalUrl: "https://hashstrat.io/",
+        assets: { preview: "https://iili.io/Bcd1XKN.png" }
     }
 ];
 
