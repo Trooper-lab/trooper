@@ -16,8 +16,9 @@ function FooterContent() {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const isViewer = searchParams.get("viewer") === "true" || pathname?.startsWith("/studio");
+    const isContact = pathname === "/contact";
 
-    if (isViewer) return null;
+    if (isViewer || isContact) return null;
 
     return <FooterInner />;
 }
