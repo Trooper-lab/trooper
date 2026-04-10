@@ -28,21 +28,21 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
     {
         id: "01",
-        name: "DISK COFIT",
-        position: "MARKETING SUPERINTENDENT",
-        text: "The web application delivered was extremely detailed and robust. Using their automated workflows saved us hours weekly.",
+        name: "Megan Pearson",
+        position: "CERCOMS",
+        text: "Trooper didn't just build a website — they built a presence. The team understood our brief from day one and the result speaks for itself.",
     },
     {
         id: "02",
-        name: "FLAVIANA AMET",
-        position: "CHIEF EXECUTIVE OFFICER",
-        text: "Trooper has consistently over-delivered. The design aesthetics combined with backend power are unmatched.",
+        name: "Mark Coffie",
+        position: "Magicalbutter.com",
+        text: "Working with Trooper was one of the best decisions we made. They brought ideas to the table we hadn't considered and executed them flawlessly.",
     },
     {
         id: "03",
-        name: "MAGEN POUNSET",
-        position: "PRODUCT MANAGER",
-        text: "Every interaction with the agency was seamless. They understood our complex AI requirements instantly.",
+        name: "Bill Muhammed",
+        position: "MyAMZTeam",
+        text: "From strategy to launch, the process was seamless. Our platform looks world-class and our users feel the difference immediately.",
     },
 ];
 

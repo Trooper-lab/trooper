@@ -25,10 +25,7 @@ export default function Home() {
         <Hero />
 
         {/* Snap point 2 */}
-        <div>
-          <CopySection />
-          <ClientTicker />
-        </div>
+        <CopySection />
 
         {/* Snap point 3 — ProjectGallery has its own internal pin+snap */}
         <ProjectGallery />
