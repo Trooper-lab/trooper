@@ -1,5 +1,5 @@
 export const superfluidConfig = {
-    id: "07",
+    id: "03",
     slug: "superfluid",
     title: "Superfluid",
     description: "Grade sync and student management platform for educators — built for flow.",
