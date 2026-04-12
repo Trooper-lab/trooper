@@ -73,7 +73,7 @@ function FooterInner() {
         <footer className="bg-background border-t border-foreground/10 relative overflow-hidden">
 
             {/* ── Contact form section ── */}
-            <div className="relative px-6 md:px-12 pt-24 pb-32 min-h-[60vh] flex items-center">
+            <div className="relative px-6 md:px-12 pt-16 md:pt-24 pb-20 md:pb-32 min-h-[60vh] flex items-center">
 
                 {/* Giant background wordmark */}
                 <div className="absolute inset-0 flex items-end justify-start pointer-events-none select-none overflow-hidden pb-4 px-6 md:px-12">
@@ -108,7 +108,7 @@ function FooterInner() {
                         <span className="font-sans text-[12px] uppercase tracking-[0.3em] opacity-40 block mb-4">
                             Start a project
                         </span>
-                        <h2 className="font-sans text-[40px] md:text-[64px] font-medium tracking-tighter leading-[1.0]">
+                        <h2 className="font-sans text-[28px] md:text-[64px] font-medium tracking-tighter leading-[1.0]">
                             Write to Trooper.
                         </h2>
                     </div>
@@ -144,7 +144,7 @@ function FooterInner() {
                         placeholder="Tell us what you want to build..."
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full bg-transparent border-none outline-none font-sans text-[24px] md:text-[40px] leading-[1.3] tracking-tight placeholder:opacity-20 resize-none overflow-hidden min-h-[120px] md:min-h-[180px]"
+                        className="w-full bg-transparent border-none outline-none font-sans text-[18px] md:text-[40px] leading-[1.3] tracking-tight placeholder:opacity-20 resize-none overflow-hidden min-h-[100px] md:min-h-[180px]"
                     />
 
                     {/* Send */}

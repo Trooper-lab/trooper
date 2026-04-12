@@ -70,7 +70,7 @@ function ProjectContent({ slug }: { slug: string }) {
             <section className="h-screen flex items-center justify-center px-6 md:px-12 relative overflow-hidden">
                 <div className="z-10 text-center">
                     <span className="font-sans text-[14px] uppercase tracking-[0.4em] opacity-40 mb-8 block">Case Study {project.id}</span>
-                    <h1 className="project-title font-sans text-[15vw] md:text-[12vw] font-medium leading-[0.9] tracking-tighter uppercase">
+                    <h1 className="project-title font-sans text-[10vw] md:text-[12vw] font-medium leading-[0.9] tracking-tighter uppercase">
                         {project.title}
                     </h1>
                 </div>
@@ -79,10 +79,10 @@ function ProjectContent({ slug }: { slug: string }) {
                 </div>
             </section>
 
-            <section className="py-32 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-32">
+            <section className="py-16 md:py-32 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-32">
                 <div className="md:col-span-12 lg:col-span-8">
                     <h2 className="font-sans text-[14px] uppercase tracking-[0.2em] opacity-40 mb-8">The Brief</h2>
-                    <p className="font-sans text-[24px] md:text-[32px] leading-[1.2] font-medium tracking-tight">
+                    <p className="font-sans text-[18px] md:text-[32px] leading-[1.2] font-medium tracking-tight">
                         {project.brief}
                     </p>
                 </div>

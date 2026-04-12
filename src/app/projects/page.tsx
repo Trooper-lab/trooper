@@ -18,7 +18,7 @@ export default function ProjectsPage() {
     const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
     return (
-        <main className="min-h-screen bg-[#F2F2F2] pt-40 pb-20 px-6 md:px-12">
+        <main className="min-h-screen bg-[#F2F2F2] pt-24 md:pt-40 pb-12 md:pb-20 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
                 <h1 className="font-sans font-medium text-[14px] uppercase tracking-[0.3em] opacity-40 mb-20">
                     Selected Works
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
 function ProjectRow({ project, onHover, onLeave }: { project: Project, onHover: () => void, onLeave: () => void }) {
     return (
         <div
-            className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-20 border-b border-black/10 transition-colors hover:bg-black/[0.02]"
+            className="group flex flex-col md:flex-row md:items-center justify-between py-6 md:py-20 border-b border-black/10 transition-colors hover:bg-black/[0.02]"
             onMouseEnter={onHover}
             onMouseLeave={onLeave}
         >
@@ -71,7 +71,7 @@ function ProjectRow({ project, onHover, onLeave }: { project: Project, onHover: 
                 <span className="font-sans text-[12px] md:text-[14px] opacity-30 font-medium">{project.id}</span>
                 <div className="flex flex-col">
                     <Link href={`/projects/${project.slug}`}>
-                        <h2 className="font-sans text-[40px] md:text-[80px] font-medium leading-[0.9] md:leading-none tracking-tighter transition-transform md:group-hover:translate-x-4 duration-500">
+                        <h2 className="font-sans text-[28px] md:text-[80px] font-medium leading-[0.9] md:leading-none tracking-tighter transition-transform md:group-hover:translate-x-4 duration-500">
                             {project.title}
                         </h2>
                     </Link>

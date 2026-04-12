@@ -64,8 +64,8 @@ export function TestimonialSection() {
                     {TESTIMONIALS.map((client, i) => (
                         <div
                             key={i}
-                            className={`flex flex-col p-12 border-black/10 transition-all group hover:bg-black/[0.02] 
-                                ${i === 0 ? "border-l border-y" : "border-r border-y"} 
+                            className={`flex flex-col p-6 md:p-12 border-black/10 transition-all group hover:bg-black/[0.02]
+                                ${i === 0 ? "border-l border-y" : "border-r border-y"}
                                 ${i === 1 ? "bg-black/[0.01]" : ""}`}
                         >
                             {/* Review Tag */}
@@ -74,7 +74,7 @@ export function TestimonialSection() {
                             </div>
 
                             {/* Large Industrial Quote */}
-                            <p className="font-sans text-[32px] font-medium leading-[1.15] tracking-tight mb-20 min-h-[160px]">
+                            <p className="font-sans text-[20px] md:text-[32px] font-medium leading-[1.15] tracking-tight mb-12 md:mb-20 md:min-h-[160px]">
                                 "{client.text}"
                             </p>
 

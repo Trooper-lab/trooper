@@ -160,7 +160,7 @@ export default function ServicesPage() {
                             <ScrambleHeading
                                 text="An interconnected"
                                 as="h1"
-                                className="font-sans font-medium text-[48px] md:text-[80px] leading-[1.0] tracking-tight"
+                                className="font-sans font-medium text-[32px] md:text-[80px] leading-[1.0] tracking-tight"
                                 revealSpeed={15}
                                 disableIdleFlicker
                             />
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                                 <ScrambleHeading
                                     text="service machine."
                                     as="h1"
-                                    className="font-sans font-medium text-[48px] md:text-[80px] leading-[1.0] tracking-tight opacity-30 whitespace-nowrap"
+                                    className="font-sans font-medium text-[32px] md:text-[80px] leading-[1.0] tracking-tight opacity-30 whitespace-nowrap"
                                     revealSpeed={20}
                                     disableIdleFlicker
                                 />
@@ -192,14 +192,14 @@ export default function ServicesPage() {
                         <span className="font-display text-[10px] opacity-20 mb-8 tracking-widest block">
                             NODE_0{i + 1}
                         </span>
-                        <h2 className="service-heading font-sans font-medium text-[40px] md:text-[85px] tracking-tighter leading-[0.9] mb-10 max-w-4xl">
+                        <h2 className="service-heading font-sans font-medium text-[28px] md:text-[85px] tracking-tighter leading-[0.9] mb-6 md:mb-10 max-w-4xl">
                             {service.title}
                         </h2>
 
                         <p className="service-tagline font-sans text-[16px] md:text-[22px] italic opacity-40 mb-10">
                             {service.tagline}
                         </p>
-                        <p className="service-body font-sans text-[20px] md:text-[28px] leading-relaxed opacity-70 mb-14 max-w-3xl">
+                        <p className="service-body font-sans text-[16px] md:text-[28px] leading-relaxed opacity-70 mb-8 md:mb-14 max-w-3xl">
                             {service.body}
                         </p>
 

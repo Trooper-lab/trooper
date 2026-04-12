@@ -79,13 +79,13 @@ export function InteractiveMarquee() {
             className="relative w-full overflow-hidden bg-[#D2D2D2] py-8 flex items-center"
         >
             <div className="flex whitespace-nowrap w-max">
-                <div ref={textRef} className="font-display text-2xl md:text-3xl uppercase px-4 shrink-0 text-foreground tracking-widest flex items-center gap-4">
+                <div ref={textRef} className="font-display text-base md:text-2xl lg:text-3xl uppercase px-2 md:px-4 shrink-0 text-foreground tracking-widest flex items-center gap-4">
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                 </div>
-                <div ref={textRef2} className="font-display text-2xl md:text-3xl uppercase px-4 shrink-0 text-foreground tracking-widest flex items-center gap-4">
+                <div ref={textRef2} className="font-display text-base md:text-2xl lg:text-3xl uppercase px-2 md:px-4 shrink-0 text-foreground tracking-widest flex items-center gap-4">
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                     <span>SHIPPING GOOD STUFF</span><span>•</span>
                     <span>SHIPPING GOOD STUFF</span><span>•</span>

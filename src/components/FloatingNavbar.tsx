@@ -127,8 +127,8 @@ function FloatingNavbarContent() {
         });
     }, [isHidden]);
 
-    // Don't render the main navbar if we're in the studio or on a custom case study
-    if (isStudio || isCaseStudy) return null;
+    // Don't render the main navbar if we're in the studio
+    if (isStudio) return null;
 
     return (
         <div className="fixed top-8 left-0 w-full flex justify-center z-[150] pointer-events-none">

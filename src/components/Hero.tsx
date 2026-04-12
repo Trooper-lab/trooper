@@ -78,7 +78,7 @@ export function Hero() {
     return (
         <section className="w-full bg-background flex flex-col">
             <div className="w-full min-h-screen flex flex-col justify-center items-center px-4 md:px-12 relative pt-16 md:pt-0">
-                <h1 className="font-display text-[120pt] leading-[1.1] md:leading-none text-foreground uppercase tracking-tighter w-full text-center header-trooper break-all whitespace-normal">
+                <h1 className="font-display text-[28vw] md:text-[120pt] leading-[1.1] md:leading-none text-foreground uppercase tracking-tighter w-full text-center header-trooper break-all whitespace-normal">
                     {scrambledText}
                 </h1>
 

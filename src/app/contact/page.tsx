@@ -98,7 +98,7 @@ export default function ContactPage() {
     const hasContent = message.trim().length > 0 && emailValid;
 
     return (
-        <main className="min-h-screen pt-40 pb-20 px-6 md:px-12 bg-[#F2F2F2] flex flex-col justify-center items-center relative overflow-hidden">
+        <main className="min-h-screen pt-24 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 bg-[#F2F2F2] flex flex-col justify-center items-center relative overflow-hidden">
 
             {/* ── Success State (always in DOM, hidden until triggered) ──── */}
             <div
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 {/* Decorative line */}
                 <div className="w-12 h-[1px] bg-black/20 mb-10" />
 
-                <h2 className="font-sans text-[36px] md:text-[72px] font-medium tracking-tighter leading-[1.05] text-center mb-6">
+                <h2 className="font-sans text-[28px] md:text-[72px] font-medium tracking-tighter leading-[1.05] text-center mb-6">
                     Thank you.
                 </h2>
 
@@ -177,7 +177,7 @@ export default function ContactPage() {
                     placeholder="Tell us what you want to build..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-transparent border-none outline-none font-sans text-[24px] md:text-[40px] leading-[1.3] tracking-tight placeholder:opacity-20 resize-none overflow-hidden min-h-[120px] md:min-h-[200px]"
+                    className="w-full bg-transparent border-none outline-none font-sans text-[18px] md:text-[40px] leading-[1.3] tracking-tight placeholder:opacity-20 resize-none overflow-hidden min-h-[100px] md:min-h-[200px]"
                 />
 
                 {/* Send action — slides up when user starts typing */}
